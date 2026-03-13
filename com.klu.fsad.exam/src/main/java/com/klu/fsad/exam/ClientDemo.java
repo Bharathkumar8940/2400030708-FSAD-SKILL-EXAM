@@ -15,7 +15,6 @@ public class ClientDemo
   Session session = sf.openSession();
   Transaction tx = session.beginTransaction();
 
-  // INSERT RECORD
   Movie m = new Movie("RRR","2022","Released","Rajamouli",550);
 
   session.save(m);
@@ -23,9 +22,6 @@ public class ClientDemo
   System.out.println("Movie Inserted Successfully");
 
   tx.commit();
-
-
-  // UPDATE USING HQL POSITIONAL PARAMETERS
 
   session = sf.openSession();
   tx = session.beginTransaction();
